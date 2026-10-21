@@ -23,7 +23,24 @@ public class Segment {
     @Override//le dice al compilador que vamos a redefinir un metodo de la superclase
     public String toString() {
         //otra forma: return startPoint.toString() + "-" + endPoint.toString();
-        //otra forma return startPoint + "-" endPoint
-        return "(" + startPoint.getX() + "," + endPoint.getY() + ")" + "-" + "(" + endPoint.getX() + "," + startPoint.getY() + ")";
+        //return startPoint + "-" + endPoint;
+        return "(" + startPoint.getX() + "," + startPoint.getY() + ")" + "-" + "(" + endPoint.getX() + "," + endPoint.getY() + ")";
     }
+
+    public void setOffset(int offX,int offY){
+        startPoint.setOffset(offX, offY);
+        endPoint.setOffset(offX, offY);
+    }
+    public void setStartPoint(){
+
+    }
+    public void setEndPoint(){
+
+    }
+    public Point getStartPoint(){
+        return startPoint;
+    }
+    public Point getEndPoint(){
+        return endPoint;
+    }//<--click derecho, generate ,getter ,seleccionar start y end
 }
